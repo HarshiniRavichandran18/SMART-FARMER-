@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="fw-bold text-success">Smart Farmer Application</h1>
+    <p class="lead">A digital solution to empower farmers</p>
+
+    <hr>
+
+    <h3 class="fw-bold">ஸ்மார்ட் விவசாயி பயன்பாடு</h3>
+    <p>விவசாயிகளை ஆதரிக்கும் ஒரு டிஜிட்டல் தீர்வு</p>
+</div>
+
+<!-- CITY INPUT FORM -->
+<div class="row justify-content-center mt-4">
+    <div class="col-md-6">
+        <form method="POST" class="d-flex">
+            <input type="text" name="city" class="form-control me-2" placeholder="Enter city | நகரம்">
+            <button type="submit" class="btn btn-success">Search | தேடு</button>
+        </form>
+    </div>
+</div>
+
+<!-- FEATURE CARDS -->
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="card shadow-sm text-center">
+            <div class="card-body">
+                <i class="fa-solid fa-seedling fa-2x text-success"></i>
+                <h5 class="mt-3">Crop Guidance</h5>
+                <p>Best crop suggestions</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card shadow-sm text-center">
+            <div class="card-body">
+                <i class="fa-solid fa-cloud-sun fa-2x text-primary"></i>
+                <h5 class="mt-3">Weather Updates</h5>
+                <p>Real-time weather data</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card shadow-sm text-center">
+            <div class="card-body">
+                <i class="fa-solid fa-chart-line fa-2x text-warning"></i>
+                <h5 class="mt-3">Market Prices</h5>
+                <p>Daily price awareness</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- REAL-TIME WEATHER DISPLAY -->
+<div class="mt-5 text-center">
+    <h2 class="fw-bold text-primary">🌦️ Weather Update | வானிலை தகவல்</h2>
+
+    <p><b>City | நகரம்:</b> {{ weather.city }}</p>
+    <p><b>Temperature | வெப்பநிலை:</b> {{ weather.temp }} °C</p>
+    <p><b>Condition | நிலை:</b> {{ weather.description }}</p>
+    <p><b>Humidity | ஈரப்பதம்:</b> {{ weather.humidity }}%</p>
+</div>
+{% endblock %}
